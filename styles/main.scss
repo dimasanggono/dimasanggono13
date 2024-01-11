@@ -1,0 +1,399 @@
+body {
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+  height: 200vh;
+}
+
+h2 {
+  color: #0ea5e9;
+  font-weight: bold;
+  font-size: 3rem;
+  font-family: "Righteous", sans-serif;
+}
+
+.navbar {
+  // background-color: #000;
+  height: 70px;
+
+  .navbar-brand {
+    margin: 0px 10px;
+    color: #fff;
+    font-weight: 600;
+  }
+  .navbar-nav {
+    margin: 0px 10px;
+
+    .nav-item a {
+      margin: 0px 5px;
+      color: #fff;
+      font-weight: 700;
+    }
+    .nav-item a:hover {
+      color: #0ea5e9;
+    }
+  }
+}
+
+.navbar-scrolled {
+  border-radius: 0px 20px 0px 20px;
+  background-color: #000;
+  border: solid #0ea5e9;
+  width: 85%;
+  align-items: center;
+  margin: auto;
+  box-shadow: 0 3px 10px rgb(0, 0, 0, 0.15);
+}
+
+.navbar-toggler {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  transition: 0.5s ease-in-out;
+}
+
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+  outline: none;
+  box-shadow: none;
+  border: 0;
+}
+
+.navbar-toggler span {
+  margin: 0;
+  padding: 0;
+}
+.toggler-icon {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: #0ea5e9;
+
+  border-radius: 1px;
+  opacity: 1px;
+  left: 0;
+  transform: rotate(0deg);
+  transition: 0.27s ease-in-out;
+}
+
+.middle-bar {
+  margin-top: 0px;
+}
+
+.navbar-toggler .top-bar {
+  margin-top: 0px;
+  transform: rotate(135deg);
+}
+
+.navbar-toggler .middle-bar {
+  opacity: 0;
+  filter: aplha(opacity=0);
+}
+
+.navbar-toggler .bottom-bar {
+  margin-top: 0px;
+  transform: rotate(-135deg);
+}
+
+.navbar-toggler.collapsed .top-bar {
+  margin-top: -20px;
+  transform: rotate(0deg);
+}
+
+.navbar-toggler.collapsed .middle-bar {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.navbar-toggler.collapsed .bottom-bar {
+  margin-top: 20px;
+  transform: rotate(0deg);
+}
+
+.navbar-toggler.collapsed .toggler-icon {
+  background: #0ea5e9;
+}
+
+.hero {
+  color: #fff;
+  h1 {
+    position: relative;
+    font-size: 2.8rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+
+  h3 {
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+
+  h5 {
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
+
+  .btn-hire {
+    border-radius: 10px;
+    border: 2px;
+  }
+  .btn-hire:hover {
+    background-color: #fff;
+    border: 2px solid #0ea5e9;
+    color: #0ea5e9;
+    font-weight: 600;
+  }
+
+  .btn-portfo {
+    border-radius: 10px;
+    border: 2px solid;
+  }
+  .btn-portfo:hover {
+    border: 2px solid #fff;
+    font-weight: 600;
+  }
+}
+
+.about {
+  color: #0ea5e9;
+  margin-bottom: 30px;
+  h3 {
+    font-weight: 800;
+    font-size: 2.5rem;
+    letter-spacing: 4px;
+  }
+  p {
+    text-align: justify;
+    letter-spacing: 2px;
+  }
+
+  img {
+    width: 70%;
+    align-items: center;
+  }
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin: auto;
+    align-items: center;
+    list-style: none;
+    padding: 5px;
+  }
+  li {
+    font-size: 2rem;
+    margin: 2px;
+  }
+
+  a:hover {
+    color: #fff;
+  }
+}
+.skill {
+  width: 100%;
+  height: 40vh;
+  text-align: center;
+  background-color: #0ea5e9;
+  opacity: 90%;
+  padding: 30px;
+
+  h2 {
+    color: #000;
+    margin-top: 30px;
+  }
+
+  p {
+    color: #000;
+    width: 50%;
+    text-align: center;
+    margin: auto;
+  }
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin: auto;
+    align-items: center;
+    list-style: none;
+    padding: 5px;
+  }
+  li {
+    font-size: 2rem;
+    margin: 5px;
+  }
+}
+
+.works {
+  width: 100%;
+  margin-top: 40px;
+  .card {
+    margin: 5px 0px;
+    background-color: #000;
+
+    .card-body {
+      background-color: #fff;
+      font-size: 0.9rem;
+
+      .card-title h4 {
+        color: #000;
+        font-size: 1.4rem;
+        font-weight: 600;
+      }
+      ul {
+        display: flex;
+        justify-content: space-between;
+        width: 15px;
+        align-items: center;
+        list-style: none;
+      }
+      li {
+        font-size: 0.5rem;
+        margin: 5px;
+      }
+    }
+  }
+}
+
+.contact {
+  margin-top: 50px;
+}
+
+footer {
+  margin-top: 20px;
+
+  a {
+    color: #0ea5e9;
+  }
+}
+@media screen and (max-width: 600px) {
+  .navbar-toggler {
+    padding: 10px 20px;
+  }
+  .navbar-collapse {
+    margin-top: 20px;
+    width: 70%;
+    text-align: center;
+    padding: 20px;
+    background-color: #000 !important;
+    border-radius: 10px;
+    opacity: 90%;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .hero {
+    justify-content: center;
+
+    img {
+      width: 100%;
+      margin: 0px 40px;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+    }
+    h3 {
+      font-size: 1.4rem;
+    }
+
+    h1,
+    h3,
+    h5 {
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  .about {
+    justify-content: center;
+
+    img {
+      width: 80%;
+      margin: 4px 40px;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+    }
+    p {
+      font-size: 1rem;
+    }
+  }
+
+  .skill {
+    height: 50vh;
+    text-align: center; /* Menengahkan konten di dalam .skill */
+
+    h2 {
+      color: #000;
+      margin-top: 30px;
+      font-size: 2rem;
+    }
+
+    p {
+      color: #000;
+      width: 100%;
+      font-style: italic;
+      font-size: 12px;
+      text-align: center;
+      margin: auto;
+    }
+
+    ul {
+      display: flex;
+      list-style: none;
+      justify-content: center; /* Menengahkan ul di dalam .skill */
+      padding: 0; /* Menghilangkan padding yang sebelumnya 40px */
+    }
+
+    li {
+      padding: 5px;
+    }
+
+    li svg {
+      height: 2rem;
+      width: 2.4rem;
+    }
+  }
+
+  .works {
+    .card {
+      width: 100%;
+      margin: 10px 0px;
+      border-radius: 40px;
+      .card-body {
+        .card-title {
+          justify-content: center;
+
+          h4 {
+            font-size: 1rem;
+          }
+
+          ul {
+            display: flex;
+            list-style: none;
+            padding: 0; /* Menghilangkan padding yang sebelumnya 40px */
+          }
+
+          li {
+            padding: 8px;
+          }
+
+          li svg {
+            height: 2rem;
+            width: 2rem;
+          }
+        }
+      }
+    }
+  }
+}
