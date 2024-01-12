@@ -233,8 +233,12 @@ h2 {
   width: 100%;
   margin-top: 40px;
 
+  h2 {
+    margin-bottom: 50px;
+  }
+
   .card {
-    margin: 5px 0px;
+    margin: 10px 0px;
     border-radius: 15px;
 
     img {
