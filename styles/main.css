@@ -379,11 +379,13 @@ footer a {
   .works .card {
     margin-bottom: 100px;
   }
-  .works .card .card-body .card-title {
-    justify-content: center;
+  .works .card .card-img-top {
+    max-height: 350px;
   }
-  .works .card .card-body .card-title h4 {
-    font-size: 1rem;
+  .works .card .card-body .card-title {
+    overflow: hidden;
+    font-size: 2rem;
+    width: 100%;
   }
   .contact {
     justify-content: center;
@@ -391,6 +393,7 @@ footer a {
   }
   footer {
     width: 100%;
+    font-size: 0.9rem;
     justify-content: center;
     align-items: center;
     text-align: center;
