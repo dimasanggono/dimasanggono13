@@ -12,7 +12,7 @@ h2 {
 }
 
 .navbar {
-  background-color: #fefefe;
+  border-bottom: 1px #0ea5e9;
   height: 70px;
 }
 .navbar .navbar-brand {
@@ -31,10 +31,17 @@ h2 {
 .navbar .navbar-nav .nav-item a:hover {
   color: #0ea5e9;
 }
+.navbar .btn-contact {
+  border: 2px solid #0ea5e9;
+  color: #0ea5e9;
+}
+.navbar .btn-contact:hover {
+  box-shadow: 2px 4px #0ea5e9;
+}
 
 .navbar-scrolled {
   border-radius: 0px 20px 0px 20px;
-  background-color: #f3f3f3;
+  background-color: #000;
   border: solid #0ea5e9;
   width: 85%;
   align-items: center;
@@ -116,33 +123,30 @@ h2 {
 
 .hero {
   color: #0ea5e9;
-  margin-top: 5rem;
+  margin-top: 3rem;
+  height: 86vh;
+  margin-bottom: 3rem;
+}
+.hero img {
+  width: 80%;
 }
 .hero h1 {
   position: relative;
-  font-size: 2.8rem;
+  font-size: 2.4rem;
   font-weight: 900;
   margin-bottom: 20px;
   text-transform: uppercase;
+  width: 70%;
 }
-.hero h3 {
+.hero p {
   margin-bottom: 30px;
-  font-size: 1.8rem;
+  font-size: 0.9rem;
   font-weight: 600;
+  color: grey;
 }
 .hero h5 {
   font-weight: 600;
-  font-size: 1.5rem;
-}
-.hero .btn-hire {
-  border-radius: 10px;
-  border: 2px;
-}
-.hero .btn-hire:hover {
-  background-color: #fff;
-  border: 2px solid #0ea5e9;
-  color: #0ea5e9;
-  font-weight: 600;
+  font-size: 1rem;
 }
 .hero .btn-portfo {
   border-radius: 10px;
@@ -151,12 +155,13 @@ h2 {
 .hero .btn-portfo:hover {
   border: 2px solid #fff;
   font-weight: 600;
+  background-color: #0ea5e9;
 }
 
 .about {
-  margin-top: 100px;
+  margin-top: 2rem;
   color: #0ea5e9;
-  margin-bottom: 30px;
+  margin-bottom: 10rem;
 }
 .about h3 {
   font-weight: 800;
@@ -190,18 +195,19 @@ h2 {
 
 .skill {
   width: 100%;
-  height: 50vh;
+  height: 60vh;
   text-align: center;
   background-color: #0ea5e9;
   opacity: 90%;
   padding: 30px;
+  margin-bottom: 10rem;
 }
 .skill h2 {
-  color: #000;
+  color: #f3f3f3;
   margin-top: 30px;
 }
 .skill p {
-  color: #000;
+  color: #f3f3f3;
   width: 50%;
   text-align: center;
   margin: auto;
@@ -222,53 +228,66 @@ h2 {
 
 .works {
   width: 100%;
-  margin-top: 40px;
+  margin-top: 2rem;
 }
-.works h2 {
+.works h2,
+.works p {
   margin-bottom: 50px;
 }
-.works .card {
-  margin: 10px 0px;
+.works p {
+  margin-top: -30px;
 }
-.works .card img {
-  height: 100%;
+.works .card {
+  width: 18rem;
+  justify-content: center;
+  margin: 10px;
 }
 .works .card-body {
   font-size: 0.9rem;
   background-color: #f3f3f3;
-}
-.works .card-body h4 a {
   color: #000;
-  font-size: 1.4rem;
-  font-weight: 600;
-  text-decoration: none;
-  text-align: center;
-  justify-content: center;
 }
-.works .card-body ul {
-  display: flex;
-  justify-content: space-between;
-  width: 15px;
-  align-items: center;
-  list-style: none;
+.works .card-body .btn {
+  color: #000;
 }
-.works .card-body li {
-  font-size: 0.5rem;
-  margin: 5px;
+.works .card-body .card-title {
+  margin-bottom: 40px;
+}
+.works .card:hover {
+  box-shadow: 5px 5px #0ea5e9;
 }
 
 .contact {
-  margin-top: -100px;
+  margin-top: 100px;
+}
+.contact .card {
+  background-color: none;
+  border-color: none;
 }
 
 footer {
   margin-top: 20px;
+  background-color: #0ea5e9;
+  height: 50px;
+  color: #fff;
 }
 footer a {
-  color: #0ea5e9;
+  color: #000;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
 }
 
+@media screen and (max-width: 1800px) {
+  .works .card {
+    width: 100%;
+    margin: 2px;
+  }
+}
 @media screen and (max-width: 600px) {
+  body {
+    box-sizing: content-box;
+  }
   .navbar-toggler {
     padding: 10px 20px;
   }
@@ -285,6 +304,7 @@ footer a {
   }
   .hero {
     justify-content: center;
+    margin-bottom: 300px;
   }
   .hero img {
     width: 100%;
@@ -292,23 +312,33 @@ footer a {
   }
   .hero h1 {
     font-size: 1.5rem;
+    width: 100%;
   }
   .hero h3 {
     font-size: 1.4rem;
   }
   .hero h1,
-.hero h3,
-.hero h5 {
+.hero p,
+.hero h5,
+.hero h3 {
     justify-content: center;
     align-items: center;
     text-align: center;
   }
+  .hero .btn-portfo {
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    margin-left: 80px;
+  }
   .about {
     justify-content: center;
+    margin-top: 2rem;
   }
   .about img {
     width: 80%;
-    margin: 4px 40px;
+    margin: 8px 40px;
   }
   .about h3 {
     font-size: 1.5rem;
@@ -347,8 +377,7 @@ footer a {
     width: 2.4rem;
   }
   .works .card {
-    width: 100%;
-    margin: 5px 0px;
+    margin-bottom: 100px;
   }
   .works .card .card-body .card-title {
     justify-content: center;
@@ -356,16 +385,15 @@ footer a {
   .works .card .card-body .card-title h4 {
     font-size: 1rem;
   }
-  .works .card .card-body .card-title ul {
-    display: flex;
-    list-style: none;
-    padding: 0; /* Menghilangkan padding yang sebelumnya 40px */
+  .contact {
+    justify-content: center;
+    margin-top: 50px;
   }
-  .works .card .card-body .card-title li {
-    padding: 8px;
-  }
-  .works .card .card-body .card-title li svg {
-    height: 1.9rem;
-    width: 1.9rem;
+  footer {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 0px;
   }
 }/*# sourceMappingURL=main.css.map */
