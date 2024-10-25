@@ -2,6 +2,7 @@ body {
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
   height: 200vh;
+  box-sizing: content-box;
 }
 
 h2 {
@@ -47,6 +48,7 @@ h2 {
   align-items: center;
   margin: auto;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  margin-bottom: 10rem;
 }
 
 .navbar-toggler {
@@ -125,18 +127,18 @@ h2 {
   color: #0ea5e9;
   margin-top: 3rem;
   height: 86vh;
-  margin-bottom: 3rem;
+  margin-bottom: 8rem;
 }
 .hero img {
   width: 80%;
 }
 .hero h1 {
   position: relative;
-  font-size: 2.4rem;
+  font-size: 2.3rem;
   font-weight: 900;
   margin-bottom: 20px;
   text-transform: uppercase;
-  width: 70%;
+  width: 100%;
 }
 .hero p {
   margin-bottom: 30px;
@@ -150,18 +152,20 @@ h2 {
 }
 .hero .btn-portfo {
   border-radius: 10px;
-  border: 2px solid;
+  border: 2px solid #0ea5e9;
+  color: #0ea5e9;
 }
 .hero .btn-portfo:hover {
-  border: 2px solid #fff;
+  border: 2px solid #0ea5e9;
   font-weight: 600;
   background-color: #0ea5e9;
+  color: #000;
 }
 
 .about {
-  margin-top: 2rem;
+  margin-top: 5rem;
   color: #0ea5e9;
-  margin-bottom: 10rem;
+  margin-bottom: 8rem;
 }
 .about h3 {
   font-weight: 800;
@@ -199,15 +203,15 @@ h2 {
   text-align: center;
   background-color: #0ea5e9;
   opacity: 90%;
-  padding: 30px;
-  margin-bottom: 10rem;
+  padding: 5px;
+  margin-bottom: 8rem;
 }
 .skill h2 {
-  color: #f3f3f3;
+  color: #000;
   margin-top: 30px;
 }
 .skill p {
-  color: #f3f3f3;
+  color: #000;
   width: 50%;
   text-align: center;
   margin: auto;
@@ -228,7 +232,8 @@ h2 {
 
 .works {
   width: 100%;
-  margin-top: 2rem;
+  margin-top: 5rem;
+  margin-bottom: 8rem;
 }
 .works h2,
 .works p {
@@ -238,38 +243,45 @@ h2 {
   margin-top: -30px;
 }
 .works .card {
-  width: 18rem;
+  width: 22rem;
   justify-content: center;
-  margin: 10px;
+  align-items: center;
+  border-radius: 20px;
 }
-.works .card-body {
+.works .card .card-body {
   font-size: 0.9rem;
-  background-color: #f3f3f3;
+  background-color: #e6e6e6;
+  color: #000;
+  border-radius: 0px 0px 20px 20px;
+}
+.works .card .card-body .btn {
   color: #000;
 }
-.works .card-body .btn {
-  color: #000;
-}
-.works .card-body .card-title {
+.works .card .card-body .card-title {
   margin-bottom: 40px;
 }
 .works .card:hover {
-  box-shadow: 5px 5px #0ea5e9;
+  box-shadow: -8px 5px 5px #0ea5e9;
 }
 
 .contact {
-  margin-top: 100px;
+  margin-top: 5rem;
 }
-.contact .card {
-  background-color: none;
-  border-color: none;
+.contact .btn-save {
+  width: 100%;
+  border: 2px solid #0ea5e9;
+}
+.contact .btn-save:hover {
+  background-color: #0ea5e9;
+  color: #000;
+  font-weight: bold;
 }
 
 footer {
   margin-top: 20px;
   background-color: #0ea5e9;
   height: 50px;
-  color: #fff;
+  color: #000;
 }
 footer a {
   color: #000;
@@ -278,10 +290,9 @@ footer a {
   font-size: 1rem;
 }
 
-@media screen and (max-width: 1800px) {
+@media screen and (max-width: 1000px) {
   .works .card {
-    width: 100%;
-    margin: 2px;
+    width: 550px;
   }
 }
 @media screen and (max-width: 600px) {
@@ -351,12 +362,10 @@ footer a {
     text-align: center; /* Menengahkan konten di dalam .skill */
   }
   .skill h2 {
-    color: #000;
     margin-top: 30px;
     font-size: 2rem;
   }
   .skill p {
-    color: #000;
     width: 100%;
     font-style: italic;
     font-size: 12px;
@@ -368,24 +377,38 @@ footer a {
     list-style: none;
     justify-content: center; /* Menengahkan ul di dalam .skill */
     padding: 0; /* Menghilangkan padding yang sebelumnya 40px */
+    width: 480px;
+    justify-content: center;
   }
   .skill li {
-    padding: 5px;
+    padding: 1px;
   }
   .skill li svg {
-    height: 2rem;
-    width: 2.4rem;
+    height: 3.5rem;
+    width: 8rem;
   }
   .works .card {
     margin-bottom: 100px;
+    width: 100%;
   }
   .works .card .card-img-top {
     max-height: 350px;
   }
-  .works .card .card-body .card-title {
-    overflow: hidden;
-    font-size: 1rem;
-    width: 100%;
+  .works .card .card-body {
+    padding: 10px;
+  }
+  .works .card .card-body h5 {
+    margin-top: 15px;
+    display: flex;
+    font-size: 14px;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  .works .card .card-body p {
+    font-size: 11px;
+  }
+  .works .card .card-body .btn-m {
+    font-size: 14px;
   }
   .contact {
     justify-content: center;

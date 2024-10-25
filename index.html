@@ -63,16 +63,16 @@
         <section class="hero">
             <div class="container col-xxl-8 px-4 py-5">
                 <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-                    <div class="col-10 col-sm-8 col-lg-6" data-aos="fade-left" data-aos-duration="1400">
+                    <div class="col-10 col-sm-8 col-lg-6" data-aos="fade-left" data-aos-duration="400">
                         <img src="./images/photo.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes"
                             width="400" height="500" loading="lazy">
                     </div>
-                    <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1400">
-                        <h5>Hello 🖐, I'm Dimas Aji Anggono</h5>
+                    <div class="col-lg-6" data-aos="fade-right" data-aos-duration="400">
+                        <h5>Hello 🖐, <span> I'm Dimas Aji Anggono</span></h5>
                         <h1>Fullstack Web Developer & Tech Enthusiast</h1>
                         <p>Building web applications and exploring tech innovations.</p>
                         <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                            <a href="#works" class="btn btn-primary btn-portfo btn-md px-4"> See My
+                            <a href="#works" class="btn  btn-portfo btn-md px-4"> See My
                                 Porfolio <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                         </div>
                     </div>
@@ -87,7 +87,7 @@
                     <div class="col-md-6" data-aos="fade-up-right" data-aos-duration="400">
                         <img src="./images/Code typing-amico.png" width="80%" alt="">
                     </div>
-                    <div class="col-md-6" data-aos="fade-up-left" data-aos-duration="1400">
+                    <div class="col-md-6" data-aos="fade-up-left" data-aos-duration="400">
                         <h3>Let's Introduce About My Self.</h3>
                         <p>I am a graduate Bachelor Degree of information systems, I am a person who has
                             motivation and passion in
@@ -111,7 +111,7 @@
             </div>
         </section>
 
-        <section class="skill" id="skill" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="500">
+        <section class="skill" id="skill" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="400">
             <div class="container">
                 <div class="text-skil">
                     <h2>My Skill</h2>
@@ -120,7 +120,7 @@
                     <div class="row justify-content-center align-items-center mt-5">
                         <div class="col-md-12" ata-aos="fade-right" data-aos-offset="300"
                             data-aos-easing="ease-in-sine">
-                            <ul>
+                            <ul class="owl-carousel owl-theme" id="skill-carousel">
                                 <li><svg xmlns="http://www.w3.org/2000/svg" height="4rem" width="4rem"
                                         viewBox="0 0 384 512">
                                         <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
@@ -173,12 +173,12 @@
 
         <section class="works mb-5" id="works">
             <div class="container">
-                <h2 class="text-center" data-aos="fade-up-right" data-aos-delay="100">My Works</h2>
-                <p class="text-center" data-aos="fade-up-left" data-aos-delay="100">Lorem ipsum dolor sit amet
+                <h2 class="text-center" data-aos="fade-up-right" data-aos-delay="400">My Works</h2>
+                <p class="text-center" data-aos="fade-up-left" data-aos-delay="400">Lorem ipsum dolor sit amet
                     consectetur adipisicing elit. Dolores, rem modi vero
                     repellat sequi iste.
                 </p>
-                <div class="row owl-carousel owl-theme" data-aos="fade-down" data-aos-delay="100">
+                <div class="row owl-carousel owl-theme" id="work" data-aos="fade-down" data-aos-delay="400">
                     <div class="col-md-3">
                         <div class="card">
                             <img src="images/porfolio/wedding.jpg" class="card-img-top" alt="">
@@ -273,9 +273,11 @@
                                 <input type="email" name="email" class="form-control "
                                     placeholder="Enter Your Email...">
                             </div>
-                            <label for="">Message</label>
-                            <textarea name="message" class="form-control " cols="30" rows="10"></textarea>
-                            <button class="btn btn-md btn-primary form-control mt-2">Send <i class="fa fa-paper-plane"
+                            <div class="mb-3">
+                                <label for="">Message</label>
+                                <textarea name="message" class="form-control mb" cols="30" rows="10"></textarea>
+                            </div>
+                            <button class="btn btn-md btn-save form-control mt-2">Send <i class="fa fa-paper-plane"
                                     aria-hidden="true"></i></button>
                         </form>
                     </div>
@@ -299,33 +301,31 @@
     <script src="./libraries/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
+
     <script>
-        var owl = $('.owl-carousel');
+        var owl = $('#work');
         owl.owlCarousel({
             items: 2,
             loop: true,
             margin: 10,
             autoplay: true,
-            autoplayTimeout: 2000,
+            autoplayTimeout: 1000,
             autoplayHoverPause: true,
             responsiveClass: true,
             responsive: {
                 0: {
                     items: 2,
+                    margin: 15,
                 },
-                900: {
-                    items: 5,
+                600: {
+                    items: 2,
                     nav: false
                 },
                 1000: {
                     items: 3,
-                    margin: 10,
                     loop: true
                 },
-                1500: {
-                    items: 4,
-                    loop: true
-                }
+
             }
         });
         $('.play').on('click', function () {
@@ -335,6 +335,39 @@
             owl.trigger('stop.owl.autoplay')
         })
     </script>
+
+    <script>
+        var owl_sec = $('#skill-carousel');
+        owl_sec.owlCarousel({
+            items: 4,
+            loop: true,
+            margin: 3,
+            center: true,
+            autoplay: true,
+            autoplayTimeout: 1000,
+            autoplayHoverPause: true,
+            responsiveClass: true,
+            nav: false,
+            responsive: {
+                0: {
+                    items: 4,
+                    margin: 5
+                },
+                600: {
+                    items: 4,
+                    nav: false
+                },
+                1000: {
+                    items: 5,
+                    loop: true,
+
+                },
+
+            }
+        });
+    </script>
+
+
 
 
     <script>
